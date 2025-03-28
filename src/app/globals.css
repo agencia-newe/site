@@ -110,7 +110,7 @@ body {
   opacity: 1;
   box-sizing: content-box;
 }
-.swiper {
+.arrasta {
   width: 5px;
   height: 5px;
   border-radius: 100%;

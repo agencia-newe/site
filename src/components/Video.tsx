@@ -4,7 +4,7 @@ export default function Video({className}: Readonly<{className?: string}>) {
       <video
         src={"/videos/video-home.mp4"}
         // poster={"/images"}
-        className="absolute inset-0 z-20 h-full w-full object-cover"
+        className="absolute inset-0 z-40 h-full w-full object-cover"
         autoPlay
         disablePictureInPicture
         disableRemotePlayback

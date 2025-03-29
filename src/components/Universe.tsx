@@ -6,8 +6,10 @@ import { Navigation } from "swiper/modules";
 // import 'swiper/css/navigation';
 import "swiper/css";
 import { planets } from "@/helpers/Planets";
+import * as motion from "motion/react-client"
 
 export default function Universe({className}: Readonly<{className?: string}>) {
+  const transition = { duration: 4, yoyo: Infinity, ease: "easeInOut" }
   return (
     <section className={`${className} relative h-screen w-full overflow-hidden rounded-t-[42px] rounded-b-[42px]`}>
       <Swiper
@@ -47,10 +49,37 @@ export default function Universe({className}: Readonly<{className?: string}>) {
                   {planets.map((planet) => (
                     <SwiperSlide key={planet.key}>
                       <div className="w-full h-full flex justify-center items-center">
-                        <Image data-aos="fade-down" data-aos-delay="500" src={planet.image} alt={planet.alt} width={500} height={500} />
-                        <Image data-aos="fade-left" data-aos-delay="800" src={planet.detail} aria-hidden alt="Elemento visual" width={500} height={500} />
 
-                        <p>{planet.description}</p>
+                        {planet.line !== "" && (
+                          <div className="relative right-20">
+                            <Image data-aos="fade-down" data-aos-delay="500" src={planet.image} alt={planet.alt} width={500} height={500} />
+
+                            <div className="absolute flex items-center w-full h-full inset-0 !left-[43%] !top-[-1.45%]">
+                              <svg className="!scale-[1.45]" xmlns="http://www.w3.org/2000/svg" id="Camada_2" data-name="Camada 2" viewBox="0 0 1057.77 484.81">
+                                <g id="Camada_1-2" data-name="Camada 1">
+                                  <motion.path fill="none" stroke="#fff" strokeWidth="3.84px" d="M1057.77,242.41H482.79C482.79,109.59,375.15,1.92,242.36,1.92S1.92,109.59,1.92,242.41s107.65,240.49,240.44,240.49" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={transition}/>
+                                </g>
+                              </svg>
+                              <Image className="relative right-[-120px]" data-aos="fade-left" data-aos-delay="800" src={planet.detail} aria-hidden alt="Elemento visual" width={50} height={50} />
+                            </div>
+    
+                            <p className="absolute top-[calc(50%+50px)] left-5/6 lg:text-2xl uppercase w-[400px] text-shadow">{planet.description}</p>
+                          </div>
+                        )}
+
+                        {planet.line === "" && (
+                          <div className="relative right-20">
+                            <Image data-aos="fade-down" data-aos-delay="500" src={planet.image} alt={planet.alt} width={500} height={500} />
+
+                            <div className="absolute top-1/2 left-4/5 flex items-center gap-3">
+                              <div className="h-0.5 bg-white w-[450px]" />
+                              <Image className="" data-aos="fade-left" data-aos-delay="800" src={planet.detail} aria-hidden alt="Elemento visual" width={70} height={70} />
+
+                            </div>
+
+                            <p className="absolute top-[calc(50%+50px)] left-5/6 lg:text-2xl uppercase w-[400px] text-shadow">{planet.description}</p>
+                          </div>
+                        )}
                       </div>
                     </SwiperSlide>
                   ))}

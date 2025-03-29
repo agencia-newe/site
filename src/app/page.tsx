@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import AosInit from "@/components/AosInit";
+import BusinessModel from "@/components/BusinessModel";
 import Enthusiasts from "@/components/Enthusiasts";
 import Header from "@/components/Header";
 import Universe from "@/components/Universe";
@@ -15,6 +16,7 @@ export default function Home() {
       <Enthusiasts className="z-30" />
       <About />
       <Universe className="" />
+      <BusinessModel />
     </main>
   );
 }

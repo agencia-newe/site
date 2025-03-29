@@ -60,7 +60,7 @@ export default function Universe({className}: Readonly<{className?: string}>) {
                                   <motion.path fill="none" stroke="#fff" strokeWidth="3.84px" d="M1057.77,242.41H482.79C482.79,109.59,375.15,1.92,242.36,1.92S1.92,109.59,1.92,242.41s107.65,240.49,240.44,240.49" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={transition}/>
                                 </g>
                               </svg>
-                              <Image className="relative right-[-120px]" data-aos="fade-left" data-aos-delay="800" src={planet.detail} aria-hidden alt="Elemento visual" width={50} height={50} />
+                              <Image className="relative right-[-120px] " data-aos="fade-left" data-aos-delay="800" src={planet.detail} aria-hidden alt="Elemento visual" width={50} height={50} />
                             </div>
     
                             <p className="absolute top-[calc(50%+50px)] left-5/6 lg:text-2xl uppercase w-[400px] text-shadow">{planet.description}</p>

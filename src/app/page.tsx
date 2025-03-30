@@ -2,6 +2,7 @@ import About from "@/components/About";
 import AosInit from "@/components/AosInit";
 import BusinessModel from "@/components/BusinessModel";
 import Enthusiasts from "@/components/Enthusiasts";
+import Experience from "@/components/Experience";
 import Header from "@/components/Header";
 import Universe from "@/components/Universe";
 import Video from "@/components/Video";
@@ -15,8 +16,9 @@ export default function Home() {
       <Video className="z-30" />
       <Enthusiasts className="z-30" />
       <About />
-      <Universe className="" />
+      <Universe />
       <BusinessModel />
+      <Experience />
     </main>
   );
 }

@@ -7,7 +7,7 @@ export default function BusinessModel({className}: {className?: string}) {
       <Image src="/images/planeta-2.svg" alt="planeta" width={317} height={317} className="absolute top-20 left-[31vw] z-20" data-aos="fade-down" data-aos-delay="200" />
       <Image src="/images/planeta-carrossel6.png" alt="planeta" width={270} height={270} className="absolute top-0 left-[45vw] z-10" data-aos="fade-down" data-aos-delay="400" />
       <div className="container">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-28">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-28 lg:px-48">
           <h2 className="text-2xl lg:text-5xl font-neulis-bold uppercase" data-aos="fade-up">
             Nosso modelo 
             <br />

@@ -77,7 +77,7 @@ export default function Universe({className}: Readonly<{className?: string}>) {
 
                             </div>
 
-                            <p className="absolute top-[calc(50%+50px)] left-5/6 lg:text-2xl uppercase w-[400px] text-shadow">{planet.description}</p>
+                            <p className="absolute top-[calc(50%+50px)] left-5/6 lg:text-2xl uppercase w-[400px] font-neulis-regular text-shadow">{planet.description}</p>
                           </div>
                         )}
                       </div>

@@ -1,6 +1,6 @@
 export default function Video({className}: Readonly<{className?: string}>) {
   return (
-    <section className={`${className} h-screen w-screen`}>
+    <section className={`${className} h-screen w-screen bg-purple`}>
       <video
         src={"/videos/video-home.mp4"}
         // poster={"/images"}

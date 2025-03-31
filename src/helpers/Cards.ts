@@ -2,39 +2,42 @@ export const cards = [
   {
     title: "Estratégia",
     list: [
-      "Conhecimento",
+      "Análise mercadológica regional",
       "Diagnóstico e diretrizes estratégicas",
-      "Consultoria de MKT",
-      "Propósito (DNA)",
-      "Posicionamento"
+      "Benchmark",
+      "Planejamento de lançamento imobiliário e posicionamento orgânico da marca 360°"
     ]
   },
   {
     title: "Criação",
     list: [
-      "Insight",
+      "Branding",
+      "Identidade visual",
       "Naming",
-      "Universo verbal",
-      "Universo visual (Design)",
-      "Experiências e ativações"
+      "Posicionamento",
+      "Live MKT"
     ]
   },
   {
-    title: "Comunicação",
+    title: "Produção",
     list: [
-      "Estratégia e canais (on/off-line)",
-      "Insights à comunicar",
-      "Segmentação",
-      "Desdobramento"
+      "Gestão de terceiros",
+      "Controle e entrega com foco em viabilidade e sustentabilidade",
     ]
   },
   {
-    title: "Marketing",
+    title: "Consultoria <br /> de MKT",
     list: [
-      "Estratégia e canais (on/off-line)",
-      "Insights à comunicar",
-      "Segmentação",
-      "Desdobramento"
+      "Apoio no desenvolvimento imobiliário e comercial de produto",
+      "Estruturação e gestão de parcerias",
+    ]
+  },
+  {
+    title: "Resultado",
+    list: [
+      "Vendas",
+      "Vendas",
+      "Vendas",
     ]
   }
 ]

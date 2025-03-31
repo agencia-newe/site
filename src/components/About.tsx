@@ -3,18 +3,18 @@ import Image from "next/image";
 export default function About({className}: {className?: string}) {
   return (
     <section className={`${className} relative py-32`}>
-      <Image src="/images/galaxia-1.png" alt="galaxia" width={1268} height={531} className="absolute top-0 left-0 -z-10" data-aos="fade-down" />
+      <Image src="/images/galaxia-1.png" alt="galaxia" width={1268} height={531} className="absolute top-0 lg:left-0 -z-10" />
       <div className="container">
         <div className="flex flex-col lg:flex-row items-start justify-around gap-20">
           <div className="flex flex-col gap-12 lg:max-w-[590px]">
             <div className="relative">
-              <Image src="/images/thaisa.png" alt="Luisa Eugenio" width={442} height={472} className="rounded mb-6" />
+              <Image src="/images/thaisa.webp" alt="Luisa Eugenio" width={442} height={472} className="rounded-[180px] max-h-[472px] object-cover object-top mb-6" data-aos="fade-down" data-aos-delay="300" />
               <Image 
-                src="/images/planeta-2.svg" 
+                src="/images/planeta-thaisa.png" 
                 alt="Planeta" 
-                width={317} 
-                height={317} 
-                className="absolute bottom-[-90px] left-[-180px]" 
+                width={201} 
+                height={200} 
+                className="absolute bottom-[-20px] left-[-120px]" 
                 data-aos="fade-right"
                 data-aos-delay="300"
               />
@@ -29,7 +29,7 @@ export default function About({className}: {className?: string}) {
 
           <div className="flex flex-col gap-12 lg:max-w-[590px] relative">
             <div className="relative">
-              <Image src="/images/luisa.png" alt="Luisa Eugenio" width={442} height={472} className="rounded mb-6" />
+              <Image src="/images/luisa.webp" alt="Luisa Eugenio" width={442} height={472} className="rounded-[180px] max-h-[472px] object-cover object-top mb-6" data-aos="fade-down" data-aos-delay="800" />
               <Image
                 src="/images/planeta-2.svg"
                 alt="Planeta" 

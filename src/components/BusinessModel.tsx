@@ -2,10 +2,9 @@ import Image from "next/image";
 
 export default function BusinessModel({className}: {className?: string}) {
   return (
-    <section className={`${className} relative pt-96 pb-32`}>
-      <Image src="/images/planeta-carrossel3.png" alt="planeta" width={270} height={270} className="absolute -top-5 left-[27vw] z-10" data-aos="fade-down" />
-      <Image src="/images/planeta-2.svg" alt="planeta" width={317} height={317} className="absolute top-20 left-[31vw] z-20" data-aos="fade-down" data-aos-delay="200" />
-      <Image src="/images/planeta-carrossel6.png" alt="planeta" width={270} height={270} className="absolute top-0 left-[45vw] z-10" data-aos="fade-down" data-aos-delay="400" />
+    <section className={`${className} relative pt-[500px] pb-32`}>
+      <Image src={"/images/galaxia-modelo-denegocio.png"} alt="galaxia" width={1096} height={319} className="absolute top-0 lg:left-0 left-[-300px] right-0 mx-auto z-0" data-aos="fade-down" />
+      <Image src={"/images/planetas-novo.png"} alt="planetas" width={511} height={511} className="absolute top-20 left-0 lg:left-[28vw] mx-auto z-10" data-aos="fade-down" data-aos-delay="300" />
       <div className="container">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-28 lg:px-48">
           <h2 className="text-2xl lg:text-5xl font-neulis-bold uppercase" data-aos="fade-up">

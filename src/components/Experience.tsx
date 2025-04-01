@@ -11,7 +11,7 @@ export default function Experience() {
   return (
     <section className="relative py-32 bg-purple">
       <div className="container">
-        <div className="flex flex-col text-white items-center gap-20 lg:px-48">
+        <div className="flex flex-col text-white items-center gap-20 2xl:px-48">
           <h2 className="font-neulis-bold uppercase text-xl lg:text-4xl" data-aos="fade-down">
             Experiência e competência dedicadas <br className="hidden lg:block" /> estrategicamente ao 
             <span className="font-neulis-bold-italic"> universo imobiliário.</span>

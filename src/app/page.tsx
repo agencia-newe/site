@@ -2,6 +2,7 @@ import About from "@/components/About";
 import AosInit from "@/components/AosInit";
 import BusinessModel from "@/components/BusinessModel";
 import Cases from "@/components/Cases";
+import Contact from "@/components/Contact";
 import Enthusiasts from "@/components/Enthusiasts";
 import Experience from "@/components/Experience";
 import Header from "@/components/Header";
@@ -23,6 +24,7 @@ export default function Home() {
       <Experience />
       <States />
       <Cases />
+      <Contact />
     </main>
   );
 }

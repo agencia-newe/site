@@ -4,7 +4,18 @@ export default function Video({className}: Readonly<{className?: string}>) {
       <video
         src={"/videos/video-home.mp4"}
         // poster={"/images"}
-        className="absolute inset-0 z-30 h-full w-full object-cover"
+        className="absolute inset-0 z-30 h-full w-full object-cover hidden lg:block"
+        autoPlay
+        disablePictureInPicture
+        disableRemotePlayback
+        x-webkit-airplay="deny"
+        muted
+        loop
+      />
+      <video
+        src={"/videos/video-home-mobile.mp4"}
+        // poster={"/images"}
+        className="absolute inset-0 z-30 h-full w-full object-cover block lg:hidden"
         autoPlay
         disablePictureInPicture
         disableRemotePlayback

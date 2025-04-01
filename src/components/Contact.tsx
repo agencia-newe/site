@@ -60,7 +60,7 @@ export default function Contact({className}: Readonly<{className?: string}>) {
             <input type="hidden" name="subject" value="Novo lead recebido" />
             <input type="hidden" name="from_name" value="newe.com.br" />
             <input required type="text" name="nome" placeholder="Nome" className="bg-purpleLight rounded-full px-5 py-3 outline-primary placeholder:text-purpleDark" />
-            <div className="flex flex-col lg:flex-row w-full items-center gap-5">
+            <div className="flex flex-col lg:flex-row w-full items-center gap-4">
               <input required type="email" name="email" placeholder="E-mail" className="w-full bg-purpleLight rounded-full px-5 py-3 outline-primary placeholder:text-purpleDark" />
               <input required type="tel" name="telefone" placeholder="Telefone" className="w-full bg-purpleLight rounded-full px-5 py-3 outline-primary placeholder:text-purpleDark" />
             </div>

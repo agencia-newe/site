@@ -88,7 +88,7 @@ export default function Universe({className}: Readonly<{className?: string}>) {
                   ))}
                 </Swiper>
                 <div className="absolute w-full flex justify-between top-1/2 -translate-y-[50%] z-20">
-                  <button className="swiper-button-prev-child relative cursor-pointer lg:text-3xl lg:left-8 rotate-180 disabled:opacity-0">
+                  <button className="swiper-button-prev-child relative cursor-pointer lg:text-3xl lg:left-8 rotate-180 disabled:opacity-0" title="Anterior">
                     <svg 
                       xmlns="http://www.w3.org/2000/svg"
                       width="20px" height="36px">
@@ -96,7 +96,7 @@ export default function Universe({className}: Readonly<{className?: string}>) {
                       d="M1.451,-0.008 C1.811,-0.008 2.171,0.126 2.451,0.397 L19.568,16.964 C19.848,17.235 20.006,17.607 20.006,17.996 C20.006,18.385 19.848,18.757 19.568,19.028 L2.451,35.595 C1.881,36.147 0.971,36.133 0.419,35.563 C-0.133,34.993 -0.119,34.084 0.451,33.532 L16.503,17.996 L0.451,2.459 C-0.119,1.908 -0.133,0.999 0.419,0.429 C0.701,0.139 1.076,-0.008 1.451,-0.008 Z"/>
                     </svg>
                   </button>
-                  <button className="swiper-button-next-child relative cursor-pointer lg:text-3xl lg:right-8 disabled:opacity-0">
+                  <button className="swiper-button-next-child relative cursor-pointer lg:text-3xl lg:right-8 disabled:opacity-0" title="Próximo">
                     <svg 
                       xmlns="http://www.w3.org/2000/svg"
                       width="20px" height="36px">

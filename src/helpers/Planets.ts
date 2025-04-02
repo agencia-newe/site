@@ -45,6 +45,6 @@ export const planets = [
     alt: "Planeta 6",
     line: "",
     detail: "/images/elemento-carrossel-6.svg",
-    description: "Nosso time é um sistema estelar de especialistas em marketing, unido experiência, criatividade e excelência."
+    description: "Nosso time é um sistema estelar de especialistas em marketing, unindo experiência, criatividade e excelência."
   }
 ]

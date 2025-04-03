@@ -26,7 +26,7 @@ export default function Home() {
     <main>
       <AosInit />
       <Header className="z-40" />
-      <div className="fixed top-0 w-full h-[93px] bg-purple z-30 rounded-b-4xl" />
+      <div className="fixed top-0 w-full lg:h-[93px] h-20 bg-purple z-30 rounded-b-4xl" />
       <Video className="z-30" />
       <Enthusiasts className="z-30" />
       <About />

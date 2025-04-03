@@ -15,7 +15,7 @@ export default function Header({className}: Readonly<{className?: string}>) {
   return (
     <header className={`${className} fixed w-full top-0`}>
       <div className="container">
-        <div className="w-full pt-5 flex justify-between items-center">
+        <div className="w-full lg:pt-5 pt-3 px-5 lg:px-0 flex justify-between items-center">
           <Link href={"/"} title="Home">
             <Image src={"/images/logo-branco.svg"} alt="Logo Newe" priority width={80} height={53} />
           </Link>

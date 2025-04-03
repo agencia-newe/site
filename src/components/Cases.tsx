@@ -5,7 +5,7 @@ import BlockLogos from "./BlockLogos";
 
 export default function Cases({className}: Readonly<{className?: string}>) {
   return (
-    <section className={`${className} relative py-32`}>
+    <section className={`${className} relative lg:py-32 py-20`}>
       <div className="container text-purpleDark">
         <div className="flex flex-col items-center gap-10 lg:gap-16">
           <h2 className="uppercase font-neulis-bold text-3xl lg:text-6xl hashtag">
@@ -83,7 +83,7 @@ export default function Cases({className}: Readonly<{className?: string}>) {
           ))}
         </div>
 
-        <div className="mt-40 lg:-mt-12 grid grid-cols-1 gap-40 lg:grid-cols-3 lg:gap-10 lg:items-end mb-60">
+        <div className="mt-40 lg:-mt-12 grid grid-cols-1 gap-40 lg:grid-cols-3 lg:gap-10 lg:items-end lg:mb-60 mb-44">
           {casesHomeFour.map((rowFour: any, index: number) => (
             <Link key={rowFour.key} href={rowFour.href} title={rowFour.title} className="group lg:even:h-[480px] 2xl:even:h-[560px] lg:odd:h-[260px] 2xl:odd:h-[330px] h-[260px] w-full" data-aos="fade-down" 
             data-aos-delay={index % 2 === 1 ? 300 : 600}>

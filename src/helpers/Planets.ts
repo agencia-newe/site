@@ -1,7 +1,7 @@
 export const planets = [
   {
     key: "1",
-    image: "/images/sol.png",
+    image: "/images/sol2.png",
     alt: "Sol",
     line: "/images/linha.svg",
     detail: "/images/e-logo.svg",
@@ -17,7 +17,7 @@ export const planets = [
   },
   {
     key: "3",
-    image: "/images/planeta-carrossel3.png",
+    image: "/images/planeta-carrossel33.png",
     alt: "Planeta 3",
     line: "",
     detail: "/images/elemento-carrossel-3.svg",
@@ -33,7 +33,7 @@ export const planets = [
   },
   {
     key: "5",
-    image: "/images/planeta-carrossel5.png",
+    image: "/images/planeta-carrossel55.png",
     alt: "Planeta 5",
     line: "",
     detail: "/images/elemento-carrossel-5.svg",

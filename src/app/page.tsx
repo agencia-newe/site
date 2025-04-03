@@ -1,20 +1,25 @@
-import About from "@/components/About";
 import AosInit from "@/components/AosInit";
-import BusinessModel from "@/components/BusinessModel";
-// import Cases from "@/components/Cases";
-import Contact from "@/components/Contact";
-import Enthusiasts from "@/components/Enthusiasts";
-// import Experience from "@/components/Experience";
 import Header from "@/components/Header";
-import States from "@/components/States";
-// import Universe from "@/components/Universe";
 import Video from "@/components/Video";
+// import About from "@/components/About";
+// import BusinessModel from "@/components/BusinessModel";
+// import Cases from "@/components/Cases";
+// import Contact from "@/components/Contact";
+// import Enthusiasts from "@/components/Enthusiasts";
+// import Experience from "@/components/Experience";
+// import States from "@/components/States";
+// import Universe from "@/components/Universe";
 
 import dynamic from "next/dynamic";
-
+const Enthusiasts = dynamic(() => import("@/components/Enthusiasts"));
+const About = dynamic(() => import("@/components/About"));
 const Universe = dynamic(() => import("@/components/Universe"));
+const BusinessModel = dynamic(() => import("@/components/BusinessModel"));
 const Experience = dynamic(() => import("@/components/Experience"));
+const States = dynamic(() => import("@/components/States"));
 const Cases = dynamic(() => import("@/components/Cases"));
+const Contact = dynamic(() => import("@/components/Contact"));
+
 
 export default function Home() {
   return (

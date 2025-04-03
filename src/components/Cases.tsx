@@ -5,7 +5,7 @@ import BlockLogos from "./BlockLogos";
 
 export default function Cases({className}: Readonly<{className?: string}>) {
   return (
-    <section className={`${className} relative lg:py-32 py-20`}>
+    <section className={`${className} relative lg:py-32 py-20`} id="cases">
       <div className="container text-purpleDark">
         <div className="flex flex-col items-center gap-10 lg:gap-16">
           <h2 className="uppercase font-neulis-bold text-3xl lg:text-6xl hashtag">

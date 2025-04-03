@@ -40,7 +40,7 @@ export default function Contact({className}: Readonly<{className?: string}>) {
   }
 
   return (
-    <section className={`${className} relative lg:py-32 py-20 bg-purple`}>
+    <section className={`${className} relative lg:py-32 py-20 bg-purple`} id="contato">
       <Image src="/images/galaxa-contato.png" alt="galaxia" width={380} height={855} className="absolute bottom-0 left-0 z-0 hidden lg:block" data-aos="fade-right" />
       <Image src="/images/planeta-2.svg" alt="galaxia" width={300} height={300} className="absolute top-[50%] translate-y-[-50%] z-0 hidden lg:block" data-aos="fade-down" data-aos-delay="500" />
       <div className="container z-10 relative">

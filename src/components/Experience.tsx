@@ -9,7 +9,7 @@ import { cards } from "@/helpers/Cards";
 
 export default function Experience() {
   return (
-    <section className="relative lg:py-32 pt-20 pb-32 bg-purple">
+    <section className="relative lg:py-32 pt-20 pb-32 bg-purple" id="servicos">
       <div className="lg:container lg:mx-auto">
         <div className="flex flex-col text-white items-center gap-20 2xl:px-48">
           <h2 className="font-neulis-bold uppercase px-10 md:px-16 lg:px-0 text-xl lg:text-4xl" data-aos="fade-down">

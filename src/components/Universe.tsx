@@ -9,7 +9,7 @@ import { planets } from "@/helpers/Planets";
 
 export default function Universe({className}: Readonly<{className?: string}>) {
   return (
-    <section className={`${className} relative h-screen w-full overflow-hidden rounded-3xl lg:rounded-[42px]`}>
+    <section className={`${className} relative h-screen w-full overflow-hidden rounded-3xl lg:rounded-[42px]`} id="universo-newe">
       <Swiper
         className="h-screen w-full"
         allowTouchMove={false}

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About({className}: {className?: string}) {
   return (
-    <section className={`${className} relative lg:py-32 pt-32 pb-20`}>
+    <section className={`${className} relative lg:py-32 pt-32 pb-20`} id="sobre">
       <Image src="/images/galaxia-1.png" alt="galaxia" width={1268} height={531} className="absolute top-0 lg:left-0 -z-10" />
       <div className="container">
         <div className="flex flex-col lg:flex-row items-start justify-around gap-20">

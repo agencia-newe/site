@@ -25,6 +25,6 @@ export const menu = [
   },
   {
     title: "Carreiras",
-    href: "#carreiras",
+    href: "/carreiras",
   }
 ]

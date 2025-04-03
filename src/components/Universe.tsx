@@ -71,7 +71,7 @@ export default function Universe({className}: Readonly<{className?: string}>) {
                             </div>
 
                             {/* Mobile */}
-                            <div className="container lg:hidden gap-10 flex flex-col items-center">
+                            <div className="container lg:hidden flex flex-col items-center">
                               <div className="relative">
                                 <Image src={planet.image} alt={planet.alt} width={500} height={500} />
                                 <div className="absolute bottom-0 left-0 right-0 mx-auto h-20 md:h-28 w-0.5 bg-white" />
@@ -99,7 +99,7 @@ export default function Universe({className}: Readonly<{className?: string}>) {
                             </div>
 
                             {/* Mobile */}
-                            <div className="container lg:hidden gap-10 flex flex-col items-center">
+                            <div className="container lg:hidden flex flex-col items-center">
                               <div className="relative">
                                 <Image src={planet.image} alt={planet.alt} width={500} height={500} />
                                 <div className="absolute bottom-0 left-0 right-0 mx-auto h-16 md:h-20 w-0.5 bg-white" />

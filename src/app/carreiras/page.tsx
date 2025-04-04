@@ -95,7 +95,7 @@ export default function Carreiras() {
             </div>
             <input required type="text" name="vaga" placeholder="Vaga/Área" className="bg-purpleLight rounded-full px-5 py-3 outline-primary placeholder:text-purpleDark" />
 
-            <input onChange={handleFileChange} required id="curriculo" type="file" accept="application/pdf" name="curriculo" placeholder="Anexe aqui seu currículo" className="hidden" />
+            <input onChange={handleFileChange} id="curriculo" type="file" accept="application/pdf" name="curriculo" placeholder="Anexe aqui seu currículo" className="hidden" />
             <label htmlFor="curriculo" className="bg-purpleLight rounded-full px-5 py-3 outline-primary placeholder:text-purpleDark cursor-pointer hover:text-white hover:bg-purpleDark transition-all duration-300">
               Anexe aqui seu currículo{cvFileName ? (': ' + cvFileName) : ''}
             </label>
@@ -109,7 +109,7 @@ export default function Carreiras() {
                 </button>
             )}
 
-            <input onChange={handleFileChange} required id="portfolio" type="file" accept="application/pdf" name="portfolio" placeholder="Anexe aqui seu portfólio" className="hidden" />
+            <input onChange={handleFileChange} id="portfolio" type="file" accept="application/pdf" name="portfolio" placeholder="Anexe aqui seu portfólio" className="hidden" />
             <label htmlFor="portfolio" className="bg-purpleLight rounded-full px-5 py-3 outline-primary placeholder:text-purpleDark cursor-pointer hover:text-white hover:bg-purpleDark transition-all duration-300">
               Anexe aqui seu portfólio{portfolioFileName ? (': ' + portfolioFileName) : ''}
             </label>
@@ -122,6 +122,8 @@ export default function Carreiras() {
                   ❌ Limpar
                 </button>
             )}
+
+            <div className="h-captcha" data-captcha="true"></div>
 
             <button 
               disabled={loading} 

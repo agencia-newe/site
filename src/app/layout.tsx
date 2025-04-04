@@ -68,6 +68,7 @@ export default function RootLayout({
         className={`${neulisLight.variable} ${neulisLightItalic.variable} ${neulisRegular.variable} ${neulisMedium.variable} ${neulisSemiBold.variable} ${neulisSemiBoldItalic.variable} ${neulisBold.variable} ${neulisBoldItalic.variable} antialiased scrollbar overflow-x-hidden`}
       >
         {children}
+        <script src="https://web3forms.com/client/script.js" async defer></script>
       </body>
     </html>
   );

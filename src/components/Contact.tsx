@@ -65,6 +65,7 @@ export default function Contact({className}: Readonly<{className?: string}>) {
               <input required type="tel" name="telefone" placeholder="Telefone" className="w-full bg-purpleLight rounded-full px-5 py-3 outline-primary placeholder:text-purpleDark" />
             </div>
             <textarea required name="mensagem" placeholder="Mensagem" rows={7} className="bg-purpleLight rounded-3xl px-5 py-3 resize-none outline-primary placeholder:text-purpleDark" />
+            <div className="h-captcha" data-captcha="true"></div>
             <button 
               disabled={loading} 
               type="submit" 

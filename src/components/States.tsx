@@ -12,7 +12,7 @@ export default function States({className}: Readonly<{className?: string}>) {
           </div>
 
           <div className="md:w-2/5 z-10">
-            <h2 className="md:relative md:-top-40 lg:top-auto text-purpleDark uppercase font-neulis-bold text-2xl text-center md:text-start">
+            <h2 className="md:relative md:-top-40 lg:top-auto text-purpleDark uppercase font-neulis-bold text-2xl lg:text-5xl text-center md:text-start">
               Estamos presentes <br />
               <span className="font-neulis-bold-italic"> em vários estados</span> <br />
               do Brasil

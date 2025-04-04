@@ -5,7 +5,7 @@ export default function About({className}: {className?: string}) {
     <section className={`${className} relative lg:py-32 pt-32 pb-20`} id="sobre">
       <Image src="/images/galaxia-1.png" alt="galaxia" width={1268} height={531} className="absolute top-0 lg:left-0 -z-10" />
       <div className="container">
-        <div className="flex flex-col lg:flex-row items-start justify-around gap-20">
+        <div className="flex flex-col lg:flex-row items-start justify-around gap-20 text-purpleDark">
           <div className="flex flex-col gap-5 md:items-center lg:items-start lg:gap-12 lg:max-w-[590px]">
             <div className="relative">
               <Image src="/images/thaisa.webp" alt="Luisa Eugenio" width={442} height={472} className="rounded-[180px] max-h-[472px] object-cover object-top mb-6" data-aos="fade-down" data-aos-delay="300" />

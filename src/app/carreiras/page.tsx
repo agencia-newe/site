@@ -2,6 +2,7 @@
 
 import Header from "@/components/Header";
 import { menuCarreiras } from "@/helpers/Menu";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -13,6 +14,7 @@ export default function Carreiras() {
   const [error, setError] = useState(false);
   const [cvFileName, setCvFileName] = useState<string | null>(null);
   const [portfolioFileName, setPortfolioFileName] = useState<string | null>(null);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   function handleFileChange(event: React.ChangeEvent<HTMLInputElement>) {
     if (event.target.files && event.target.files.length > 0) {
@@ -40,34 +42,46 @@ export default function Carreiras() {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     setLoading(true);
     event.preventDefault();
+  
+    if (!captchaToken) {
+      setLoading(false);
+      alert("Por favor, complete o captcha.");
+      return;
+    }
+  
     const formData = new FormData(event.target as HTMLFormElement);
-
     formData.append("access_key", "2c70c258-19b5-4434-bdf0-4b2f71a58a10");
-
+    formData.append("h-captcha-response", captchaToken);
+  
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
-
+  
     const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: json
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
     });
+  
     const result = await response.json();
     if (result.success) {
-        console.log(result);
-        router.push("/obrigado");
+      console.log(result);
+      router.push("/obrigado");
     } else {
-        setLoading(false);
-        console.log(result);
-        setError(true);
+      setLoading(false);
+      console.log(result);
+      setError(true);
     }
   }
 
+  const onHCaptchaChange = (token: string) => {
+    setCaptchaToken(token);
+  };
+
   return (
-    <section className={`relative lg:py-32 pt-32 pb-20 bg-purple`}>
+    <section className={`relative lg:py-32 pt-32 pb-20 bg-purple min-h-screen`}>
       <Header menu={menuCarreiras} className="z-40" />
       <div className="fixed top-0 w-full h-[93px] bg-purple z-30 rounded-b-4xl" />
       <Image src="/images/galaxa-contato.png" alt="galaxia" width={380} height={855} className="absolute bottom-0 max-w-1/3 lg:max-w-full left-0 z-0" data-aos="fade-right" />
@@ -96,7 +110,7 @@ export default function Carreiras() {
             <input required type="text" name="vaga" placeholder="Vaga/Área" className="bg-purpleLight rounded-full px-5 py-3 outline-primary placeholder:text-purpleDark" />
 
             <input onChange={handleFileChange} id="curriculo" type="file" accept="application/pdf" name="curriculo" placeholder="Anexe aqui seu currículo" className="hidden" />
-            <label htmlFor="curriculo" className="bg-purpleLight rounded-full px-5 py-3 outline-primary placeholder:text-purpleDark cursor-pointer hover:text-white hover:bg-purpleDark transition-all duration-300">
+            <label htmlFor="curriculo" className="bg-purpleLight rounded-full px-5 py-3 outline-primary text-purpleDark placeholder:text-purpleDark cursor-pointer hover:text-white hover:bg-purpleDark transition-all duration-300">
               Anexe aqui seu currículo{cvFileName ? (': ' + cvFileName) : ''}
             </label>
             {cvFileName && (
@@ -110,7 +124,7 @@ export default function Carreiras() {
             )}
 
             <input onChange={handleFileChange} id="portfolio" type="file" accept="application/pdf" name="portfolio" placeholder="Anexe aqui seu portfólio" className="hidden" />
-            <label htmlFor="portfolio" className="bg-purpleLight rounded-full px-5 py-3 outline-primary placeholder:text-purpleDark cursor-pointer hover:text-white hover:bg-purpleDark transition-all duration-300">
+            <label htmlFor="portfolio" className="bg-purpleLight rounded-full px-5 py-3 outline-primary text-purpleDark placeholder:text-purpleDark cursor-pointer hover:text-white hover:bg-purpleDark transition-all duration-300">
               Anexe aqui seu portfólio{portfolioFileName ? (': ' + portfolioFileName) : ''}
             </label>
             {portfolioFileName && (
@@ -122,16 +136,22 @@ export default function Carreiras() {
                   ❌ Limpar
                 </button>
             )}
+            
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
+              <HCaptcha
+                sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                reCaptchaCompat={false}
+                onVerify={onHCaptchaChange}
+              />
 
-            <div className="h-captcha" data-captcha="true"></div>
-
-            <button 
-              disabled={loading} 
-              type="submit" 
-              className="bg-purpleLight rounded-full px-12 pt-3 pb-2.5 self-end cursor-pointer text-purpleDark hover:bg-purpleDark hover:text-white transition-all duration-300 outline-primary disabled:opacity-50 disabled:cursor-default disabled:pointer-events-none"
-            >
-              {loading ? 'Enviando...' : 'Enviar'}
-            </button>
+              <button 
+                disabled={loading} 
+                type="submit" 
+                className="bg-purpleLight rounded-full px-12 pt-3 pb-2.5 self-end cursor-pointer text-purpleDark hover:bg-purpleDark hover:text-white transition-all duration-300 outline-primary disabled:opacity-50 disabled:cursor-default disabled:pointer-events-none"
+              >
+                {loading ? 'Enviando...' : 'Enviar'}
+              </button>
+            </div>
             <input type="checkbox" name="botcheck" className="hidden" style={{display: "none"}} />
           </form>
         )}

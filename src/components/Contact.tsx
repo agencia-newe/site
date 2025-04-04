@@ -1,5 +1,6 @@
 'use client';
 
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -9,35 +10,48 @@ export default function Contact({className}: Readonly<{className?: string}>) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    setLoading(true);
-    event.preventDefault();
-    const formData = new FormData(event.target as HTMLFormElement);
+  setLoading(true);
+  event.preventDefault();
 
-    formData.append("access_key", "2c70c258-19b5-4434-bdf0-4b2f71a58a10");
-
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: json
-    });
-    const result = await response.json();
-    if (result.success) {
-        console.log(result);
-        router.push("/obrigado");
-    } else {
-        setLoading(false);
-        console.log(result);
-        setError(true);
-    }
+  if (!captchaToken) {
+    setLoading(false);
+    alert("Por favor, complete o captcha.");
+    return;
   }
+
+  const formData = new FormData(event.target as HTMLFormElement);
+  formData.append("access_key", "2c70c258-19b5-4434-bdf0-4b2f71a58a10");
+  formData.append("h-captcha-response", captchaToken); // ✅ append captcha token
+
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+
+  const response = await fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json"
+    },
+    body: json
+  });
+
+  const result = await response.json();
+  if (result.success) {
+    console.log(result);
+    router.push("/obrigado");
+  } else {
+    setLoading(false);
+    console.log(result);
+    setError(true);
+  }
+}
+
+  const onHCaptchaChange = (token: string) => {
+    setCaptchaToken(token);
+  };
 
   return (
     <section className={`${className} relative lg:py-32 py-20 bg-purple`} id="contato">
@@ -65,14 +79,21 @@ export default function Contact({className}: Readonly<{className?: string}>) {
               <input required type="tel" name="telefone" placeholder="Telefone" className="w-full bg-purpleLight rounded-full px-5 py-3 outline-primary placeholder:text-purpleDark" />
             </div>
             <textarea required name="mensagem" placeholder="Mensagem" rows={7} className="bg-purpleLight rounded-3xl px-5 py-3 resize-none outline-primary placeholder:text-purpleDark" />
-            <div className="h-captcha" data-captcha="true"></div>
-            <button 
-              disabled={loading} 
-              type="submit" 
-              className="bg-purpleLight rounded-full px-12 pt-3 pb-2.5 self-end cursor-pointer text-purpleDark hover:bg-purpleDark hover:text-white transition-all duration-300 outline-primary disabled:opacity-50 disabled:cursor-default disabled:pointer-events-none"
-            >
-              {loading ? 'Enviando...' : 'Enviar'}
-            </button>
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
+              <HCaptcha 
+                sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                reCaptchaCompat={false}
+                onVerify={onHCaptchaChange}
+              />
+
+              <button 
+                disabled={loading} 
+                type="submit" 
+                className="bg-purpleLight rounded-full px-12 pt-3 pb-2.5 self-end cursor-pointer text-purpleDark hover:bg-purpleDark hover:text-white transition-all duration-300 outline-primary disabled:opacity-50 disabled:cursor-default disabled:pointer-events-none"
+              >
+                {loading ? 'Enviando...' : 'Enviar'}
+              </button>
+            </div>
             <input type="checkbox" name="botcheck" className="hidden" style={{display: "none"}} />
           </form>
         )}

@@ -14,7 +14,7 @@ export default function About({className}: {className?: string}) {
                 alt="Planeta" 
                 width={201} 
                 height={200} 
-                className="absolute max-w-[130px] lg:max-w-full top-[-60px] -left-2.5 lg:bottom-[-20px] lg:left-[-120px]" 
+                className="absolute max-w-[130px] lg:max-w-full lg:top-auto top-[-60px] -left-2.5 lg:bottom-[-20px] lg:left-[-120px]" 
                 data-aos="fade-right"
                 data-aos-delay="300"
               />

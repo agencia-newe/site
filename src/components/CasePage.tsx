@@ -7,20 +7,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import { menuCarreiras } from "@/helpers/Menu";
 
 export default function CasePage({data}: {data: any}) {
   return (
     <section className="relative">
       <AosInit />
-      <Image src={"/images/galaxia-modelo-denegocio.png"} alt="galaxia" width={800} height={319} className="absolute top-[90px] lg:left-0 left-[-300px] right-0 mx-auto z-0" data-aos="fade-down" />
-      <Image src={"/images/planetas-novo.png"} alt="planetas" width={420} height={420} className="absolute top-[113px] left-0 lg:left-[32vw] mx-auto px-10 lg:px-0 z-10" data-aos="fade-down" data-aos-delay="300" />
-      <Header className="z-40" />
+      <Image src={"/images/galaxia-modelo-denegocio.png"} alt="galaxia" width={800} height={319} className="absolute top-[90px] left-0 right-0 px-10 md:px-24 lg:px-0 mx-auto z-0" data-aos="fade-down" />
+      <Image src={"/images/planetas-novo.png"} alt="planetas" width={420} height={420} className="absolute top-[113px] left-0 right-0 lg:right-auto lg:left-[32vw] mx-auto px-24 lg:px-0 z-10" data-aos="fade-down" data-aos-delay="300" />
+      <Header menu={menuCarreiras} className="z-40" />
       <div className="fixed top-0 w-full h-[93px] bg-purple z-30 rounded-b-4xl" />
 
       <h1 className="sr-only">{data.product}</h1>
 
-      <div className="container pt-96 lg:pt-80 pb-20 2xl:!px-20">
-        <div className="font-neulis-regular lg:text-xl uppercase" data-aos="fade-right" data-aos-delay="1000">
+      <div className="container pt-72 lg:pt-80 pb-20 2xl:!px-20">
+        <div className="font-neulis-regular lg:text-xl uppercase text-center lg:text-start" data-aos="fade-right" data-aos-delay="1000">
           <p>
             Praça: <span className="font-neulis-bold-italic lg:text-[22px]">{data.plaza} </span> 
           </p>
@@ -32,10 +33,10 @@ export default function CasePage({data}: {data: any}) {
           </p>
         </div>
 
-        <section className="lg:mt-32 mt-20">
+        <section className="lg:mt-32 mt-12">
           <div className="relative" data-aos="fade-up">
             <Swiper 
-              className="lg:!h-[700px] bg-purpleLight"
+              className="aspect-video bg-purpleLight"
               grabCursor={true}
               modules={[Navigation]}
               navigation={{
@@ -43,14 +44,15 @@ export default function CasePage({data}: {data: any}) {
                 prevEl: ".swiper-button-prev-case",
               }}
             >
-              {data.mockupVideo && (
-                <SwiperSlide className="relative w-full lg:!h-[700px]">
+              {data.conceptVideo && (
+                <SwiperSlide className="relative w-full aspect-video">
                   <video
-                    src={data.mockupVideo.src}
+                    src={data.conceptVideo.src}
                     // poster={""}
                     className="object-cover w-full h-full"
                     autoPlay
                     // controls
+                    playsInline
                     disablePictureInPicture
                     disableRemotePlayback
                     x-webkit-airplay="deny"
@@ -60,8 +62,8 @@ export default function CasePage({data}: {data: any}) {
                 </SwiperSlide>
               )}
               {data.carousel.map((item: any, index: number) => (
-                <SwiperSlide className="relative w-full !h-48 md:!h-[400px] lg:!h-[700px]" key={item.src}>
-                  <Image src={item.src} alt={item.alt} fill quality={100} className="object-cover" />
+                <SwiperSlide className="relative w-full aspect-video" key={item.src}>
+                  <Image src={item.src} alt={item.alt} fill quality={100} className="object-cover aspect-video" />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -87,15 +89,15 @@ export default function CasePage({data}: {data: any}) {
           </div>
 
           {data.bigImage && (
-            <div className="mt-7 relative w-full h-48 md:h-[400px] lg:!h-[700px] bg-purpleLight">
-              <Image src={data.bigImage.src} alt={data.bigImage.alt} fill quality={100} className="object-cover" />
+            <div className="mt-7 relative w-full aspect-video bg-purpleLight">
+              <Image src={data.bigImage.src} alt={data.bigImage.alt} fill quality={100} className="object-cover aspect-video" />
             </div>
           )}
 
           {data.grid && (
             <div className="mt-7 grid grid-cols-1 lg:grid-cols-2 gap-1">
               {data.grid.map((item: any) => (
-                <div key={item.src} className="relative w-full h-48 md:h-[400px] lg:h-[500px] bg-purpleLight">
+                <div key={item.src} className="relative w-full aspect-video bg-purpleLight">
                   <Image src={item.src} alt={item.alt} fill quality={100} className="object-cover" />
                 </div>
               ))}

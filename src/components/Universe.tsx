@@ -77,8 +77,8 @@ export default function Universe({className}: Readonly<{className?: string}>) {
                                 <div className="absolute bottom-0 left-0 right-0 mx-auto h-20 md:h-28 w-0.5 bg-white" />
                               </div>
                               
-                              <Image className="" src={planet.detail} aria-hidden alt="Elemento visual" width={50} height={50} />
-                              <p className="lg:text-2xl uppercase text-center max-w-[450px] text-shadow font-neulis-regular">{planet.description}</p>
+                              <Image className="relative right-1" src={planet.detail} aria-hidden alt="Elemento visual" width={50} height={50} />
+                              <p className="lg:text-2xl mt-10 uppercase text-center max-w-[450px] text-shadow font-neulis-regular">{planet.description}</p>
                             </div>
                           </>
                         )}
@@ -106,7 +106,7 @@ export default function Universe({className}: Readonly<{className?: string}>) {
                               </div>
                               
                               <Image className="" src={planet.detail} aria-hidden alt="Elemento visual" width={50} height={50} />
-                              <p className="lg:text-2xl uppercase text-center max-w-[450px] text-shadow font-neulis-regular">{planet.description}</p>
+                              <p className="lg:text-2xl mt-10 uppercase text-center max-w-[450px] text-shadow font-neulis-regular">{planet.description}</p>
                             </div>
                           </>
                         )}

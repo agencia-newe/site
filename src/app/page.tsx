@@ -1,6 +1,7 @@
 import AosInit from "@/components/AosInit";
 import Header from "@/components/Header";
 import Video from "@/components/Video";
+import { menuHome } from "@/helpers/Menu";
 // import About from "@/components/About";
 // import BusinessModel from "@/components/BusinessModel";
 // import Cases from "@/components/Cases";
@@ -25,7 +26,7 @@ export default function Home() {
   return (
     <main>
       <AosInit />
-      <Header className="z-40" />
+      <Header menu={menuHome} className="z-40" />
       <div className="fixed top-0 w-full lg:h-[93px] h-20 bg-purple z-30 rounded-b-4xl" />
       <Video className="z-30" />
       <Enthusiasts className="z-30" />

@@ -14,7 +14,7 @@ export default function About({className}: {className?: string}) {
                 alt="Planeta" 
                 width={201} 
                 height={200} 
-                className="absolute bottom-[-20px] left-[-120px]" 
+                className="absolute max-w-[130px] lg:max-w-full top-[-60px] -left-2.5 lg:bottom-[-20px] lg:left-[-120px]" 
                 data-aos="fade-right"
                 data-aos-delay="300"
               />
@@ -35,7 +35,7 @@ export default function About({className}: {className?: string}) {
                 alt="Planeta" 
                 width={317} 
                 height={317} 
-                className="absolute top-[-95px] left-[-140px]" 
+                className="absolute max-w-[200px] lg:max-w-full top-[-60px] left-[-50px] lg:top-[-95px] lg:left-[-140px]" 
                 data-aos="fade-down" 
                 data-aos-delay="1000"
               />

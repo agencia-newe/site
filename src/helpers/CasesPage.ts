@@ -2,7 +2,7 @@ export const blend = {
     plaza: "São Paulo",
     client: "Sequóia",
     product: "Blend 468",
-    mockupVideo: {
+    conceptVideo: {
       src: "/videos/sequoia.mp4",
       alt: "blend 468",
     },

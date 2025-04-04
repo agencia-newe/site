@@ -72,7 +72,7 @@ export default function Contact({className}: Readonly<{className?: string}>) {
         {!error && (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4 lg:gap-5 max-w-[900px] mx-auto font-neulis-medium">
             <input type="hidden" name="subject" value="Novo lead recebido" />
-            <input type="hidden" name="from_name" value="newe.com.br" />
+            <input type="hidden" name="from_name" value="agencianewe.com.br" />
             <input required type="text" name="nome" placeholder="Nome" className="bg-purpleLight rounded-full px-5 py-3 outline-primary placeholder:text-purpleDark" />
             <div className="flex flex-col lg:flex-row w-full items-center gap-4">
               <input required type="email" name="email" placeholder="E-mail" className="w-full bg-purpleLight rounded-full px-5 py-3 outline-primary placeholder:text-purpleDark" />

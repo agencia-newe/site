@@ -1,7 +1,7 @@
-import AosInit from "@/components/AosInit";
-import Header from "@/components/Header";
 import Video from "@/components/Video";
+import Header from "@/components/Header";
 import { menuHome } from "@/helpers/Menu";
+import AosInit from "@/components/AosInit";
 // import About from "@/components/About";
 // import BusinessModel from "@/components/BusinessModel";
 // import Cases from "@/components/Cases";

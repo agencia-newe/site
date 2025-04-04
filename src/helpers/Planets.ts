@@ -2,6 +2,7 @@ export const planets = [
   {
     key: "1",
     image: "/images/sol2.png",
+    imageMobile: "/images/sol2.png",
     alt: "Sol",
     line: "/images/linha.svg",
     detail: "/images/e-logo.svg",
@@ -10,6 +11,7 @@ export const planets = [
   {
     key: "2",
     image: "/images/carrossel-2.png",
+    imageMobile: "/images/carrossel-mobile2.png",
     alt: "Planeta 2",
     line: "",
     detail: "/images/elemento-carrossel-2.svg",
@@ -18,6 +20,7 @@ export const planets = [
   {
     key: "3",
     image: "/images/planeta-carrossel33.png",
+    imageMobile: "/images/carrossel-mobile3.png",
     alt: "Planeta 3",
     line: "",
     detail: "/images/elemento-carrossel-3.svg",
@@ -26,6 +29,7 @@ export const planets = [
   {
     key: "4",
     image: "/images/planeta-carrossel4.png",
+    imageMobile: "/images/carrossel-mobile4.png",
     alt: "Planeta 4",
     line: "",
     detail: "/images/elemento-carrossel-4.svg",
@@ -34,6 +38,7 @@ export const planets = [
   {
     key: "5",
     image: "/images/planeta-carrossel55.png",
+    imageMobile: "/images/carrossel-mobile5.png",
     alt: "Planeta 5",
     line: "",
     detail: "/images/elemento-carrossel-5.svg",
@@ -42,6 +47,7 @@ export const planets = [
   {
     key: "6",
     image: "/images/planeta-carrossel6.png",
+    imageMobile: "/images/carrossel-mobile6.png",
     alt: "Planeta 6",
     line: "",
     detail: "/images/elemento-carrossel-6.svg",

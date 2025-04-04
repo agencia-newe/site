@@ -6,6 +6,7 @@ import { Navigation } from "swiper/modules";
 // import 'swiper/css/navigation';
 import "swiper/css";
 import { planets } from "@/helpers/Planets";
+import { cn } from "@/lib/utils";
 
 export default function Universe({className}: Readonly<{className?: string}>) {
   return (
@@ -16,6 +17,7 @@ export default function Universe({className}: Readonly<{className?: string}>) {
         modules={[Navigation]}
         navigation={{
           nextEl: ".swiper-button-next-parent",
+          prevEl: ".swiper-button-prev-parent",
         }}
       >
         {/* Parent Slider */}
@@ -36,7 +38,8 @@ export default function Universe({className}: Readonly<{className?: string}>) {
         {/* Child Slider */}
         <SwiperSlide>
           <section className={`relative h-screen w-full bg-white overflow-hidden rounded-3xl lg:rounded-[42px]`} data-aos="fade-up">
-            <Image src="/images/fundo-geral.webp" alt="Fundo" fill className="absolute inset-0 -z-10 object-cover opacity-90 lg:opacity-100" />
+            <Image src="/images/fundo-geral.webp" alt="Fundo" fill className="hidden lg:block absolute inset-0 -z-10 object-cover opacity-90 lg:opacity-100" />
+            <Image src="/images/fundo-geral-mobile.webp" alt="Fundo" fill className="block lg:hidden absolute inset-0 -z-10 object-cover opacity-95" />
             <div className="text-white inset-0 w-full h-full">
               <div className="w-full h-full relative">
                 <Swiper
@@ -73,7 +76,7 @@ export default function Universe({className}: Readonly<{className?: string}>) {
                             {/* Mobile */}
                             <div className="container lg:hidden flex flex-col items-center">
                               <div className="relative">
-                                <Image src={planet.image} alt={planet.alt} width={500} height={500} />
+                                <Image src={planet.imageMobile} alt={planet.alt} width={500} height={500} />
                                 <div className="absolute bottom-0 left-0 right-0 mx-auto h-20 md:h-28 w-0.5 bg-white" />
                               </div>
                               
@@ -101,9 +104,9 @@ export default function Universe({className}: Readonly<{className?: string}>) {
                             {/* Mobile */}
                             <div className="container lg:hidden flex flex-col items-center">
                               <div className="relative">
-                                <Image src={planet.image} alt={planet.alt} width={500} height={500} />
-                                <div className="absolute bottom-0 left-0 right-0 mx-auto h-16 md:h-20 w-0.5 bg-white" />
+                                <Image src={planet.imageMobile} alt={planet.alt} width={500} height={500} className={cn("px-20", planet.alt === "Planeta 2" && "!px-5")} />
                               </div>
+                              <div className="mt-2 h-16 md:h-20 w-0.5 bg-white" />
                               
                               <Image className="" src={planet.detail} aria-hidden alt="Elemento visual" width={50} height={50} />
                               <p className="lg:text-2xl mt-10 uppercase text-center max-w-[450px] text-shadow font-neulis-regular">{planet.description}</p>

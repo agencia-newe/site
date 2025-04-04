@@ -12,6 +12,7 @@ import AosInit from "@/components/AosInit";
 // import Universe from "@/components/Universe";
 
 import dynamic from "next/dynamic";
+const CookieBanner = dynamic(() => import("@/components/CookieBanner"));
 const Enthusiasts = dynamic(() => import("@/components/Enthusiasts"));
 const About = dynamic(() => import("@/components/About"));
 const Universe = dynamic(() => import("@/components/Universe"));
@@ -25,6 +26,7 @@ const Contact = dynamic(() => import("@/components/Contact"));
 export default function Home() {
   return (
     <main>
+      <CookieBanner />
       <AosInit />
       <Header menu={menuHome} className="z-40" />
       <div className="fixed top-0 w-full lg:h-[93px] h-20 bg-purple z-30 rounded-b-4xl" />

@@ -8,7 +8,7 @@ export default function States({className}: Readonly<{className?: string}>) {
         <div className="flex flex-col md:flex-row gap-10 md:gap-14 w-full">
           <div className="md:w-3/5 relative">
             <Image src="/images/mapa-brasil-cinza.svg" alt="mapa" width={771} height={796} className="absolute top-[-340px] lg:top-[-380px] right-0 z-10" data-aos="fade-right" />
-            <Image src="/images/mapa-completo.svg" alt="estados" width={771} height={796} className="absolute top-[-340px] lg:top-[-380px] right-0 z-20" data-aos="fade-zoom-in" data-aos-delay="1200" />
+            <Image src="/images/mapa-completo-certo.svg" alt="estados" width={771} height={796} className="font-neulis-bold absolute top-[-340px] lg:top-[-380px] right-0 z-20" data-aos="fade-zoom-in" data-aos-delay="1200" />
           </div>
 
           <div className="md:w-2/5 z-10">

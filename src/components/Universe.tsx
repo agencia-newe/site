@@ -29,7 +29,7 @@ export default function Universe({className}: Readonly<{className?: string}>) {
                 Conheça o universo Newe dedicado <br /> ao imobiliário
               </h2>
               <button title="clique aqui" className="swiper-button-next-parent cursor-pointer bg-purpleLight text-purpleDark font-neulis-semi-bold-italic uppercase mt-12 pb-2.5 pt-3 px-10 rounded-2xl w-fit hover:bg-purple hover:text-white !transition-all !duration-300">
-                Clique aqui
+                Iniciar
               </button>
             </div>
           </section>
@@ -42,6 +42,9 @@ export default function Universe({className}: Readonly<{className?: string}>) {
             <Image src="/images/fundo-geral-mobile.webp" alt="Fundo" fill className="block lg:hidden absolute inset-0 -z-10 object-cover opacity-95" />
             <div className="text-white inset-0 w-full h-full">
               <div className="w-full h-full relative">
+                <button title="Voltar" className="swiper-button-prev-parent absolute bottom-10 left-0 right-0 mx-auto lg:right-auto lg:left-20 lg:bottom-20 z-40 cursor-pointer bg-purpleLight text-purpleDark font-neulis-semi-bold-italic uppercase pb-1 pt-1.5 px-4 pt lg:pb-2.5 lg:pt-3 lg:px-10 rounded-2xl w-fit hover:bg-purple hover:text-white !transition-all !duration-300">
+                  Voltar
+                </button>
                 <Swiper
                   className="w-full h-full cursor-grab active:cursor-grabbing"
                   nested={true}

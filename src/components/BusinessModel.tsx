@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function BusinessModel({className}: {className?: string}) {
   return (
     <section className={`${className} relative pt-[250px] pb-20 lg:pt-[500px] lg:pb-32`}>
-      <Image src={"/images/galaxia-modelo-denegocio.png"} alt="galaxia" width={1096} height={319} className="absolute top-0 left-0 right-0 mx-auto px-10 lg:px-0 z-10" data-aos="fade-down" data-aos-delay="300" />
-      <Image src={"/images/planetas-novo.png"} alt="planetas" width={511} height={511} className="absolute top-7 left-0 lg:left-[28vw] mx-auto px-20 lg:px-0 z-10" data-aos="fade-down" data-aos-delay="300" />
+      <Image src={"/images/galaxia-modelo-denegocio.png"} alt="galaxia" width={1096} height={319} className="absolute top-0 left-0 right-0 mx-auto px-10 lg:px-0 z-10" data-aos="fade-up" data-aos-delay="300" />
+      <Image src={"/images/planetas-novo.png"} alt="planetas" width={511} height={511} className="absolute top-7 left-0 lg:left-[28vw] mx-auto px-20 lg:px-0 z-10" data-aos="fade-up" data-aos-delay="300" />
       <div className="container">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-28 lg:px-48 text-purpleDark">
           <h2 className="text-2xl lg:text-5xl font-neulis-bold uppercase" data-aos="fade-up">

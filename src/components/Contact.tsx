@@ -84,6 +84,7 @@ export default function Contact({className}: Readonly<{className?: string}>) {
                 sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
                 reCaptchaCompat={false}
                 onVerify={onHCaptchaChange}
+                loadAsync={true}
               />
 
               <button 

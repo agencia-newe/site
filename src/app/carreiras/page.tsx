@@ -2,7 +2,6 @@
 
 import Header from "@/components/Header";
 import { menuCarreiras } from "@/helpers/Menu";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";

@@ -24,7 +24,7 @@ export default function About({className}: {className?: string}) {
               <p className="text-lg lg:text-3xl font-neulis-light-italic">Diretora executiva</p>
             </div>
 
-            <p className="lg:text-xl font-neulis-regular">Analítica e estratégica, possui uma bagagem com quase 20 anos de vivências no universo imobiliário, dominando o segmento de forma única e garantindo assertividade no planejamento estratégico das campanhas, em especial, no resultado final.</p>
+            <p className="lg:text-xl font-neulis-regular">Analítica e estratégica, possui uma bagagem com mais de 15 anos de vivências no universo imobiliário, dominando o segmento de forma única e garantindo assertividade no planejamento estratégico das campanhas, em especial, no resultado final.</p>
           </div>
 
           <div className="flex flex-col gap-5 md:items-center lg:items-start lg:gap-12 lg:max-w-[590px] relative">

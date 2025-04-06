@@ -302,6 +302,7 @@ export const parqueGlobal = {
   plaza: "São Paulo - SP",
   client: "Benx e Related",
   product: "Parque Global",
+  videoID: "bgL6PTPvovU",
   carousel: [
     {
       src: "/images/cases/parque-global/capa-parque-global.jpg",
@@ -408,6 +409,7 @@ export const villas = {
   plaza: "São Paulo - SP",
   client: "Catuaí",
   product: "Villas Cidade Jardim",
+  videoID: "j-0AODZF1Aw",
   carousel: [
     {
       src: "/images/cases/villas-cidade-jardim/capa-.jpg",

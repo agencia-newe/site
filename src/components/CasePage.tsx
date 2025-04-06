@@ -10,8 +10,11 @@ import { Navigation } from "swiper/modules";
 import { menuCarreiras } from "@/helpers/Menu";
 import CaseModal from "./CaseModal";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
+import { YouTubeEmbed } from "@next/third-parties/google";
 
 export default function CasePage({data}: {data: any}) {
+  const url = usePathname();
   return (
     <section className="relative">
       <AosInit />
@@ -36,62 +39,68 @@ export default function CasePage({data}: {data: any}) {
         </div>
 
         <section className="lg:mt-32 mt-12">
-          <div className="relative" data-aos="fade-up">
-            <Swiper
-              className="aspect-video bg-purpleLight"
-              grabCursor={false}
-              modules={[Navigation]}
-              navigation={{
-                nextEl: ".swiper-button-next-case",
-                prevEl: ".swiper-button-prev-case",
-              }}
-            >
-              {data.carousel.map((item: any) => (
-                <SwiperSlide className="relative group w-full aspect-video" key={item.src}>
-                  {data.carousel.length > 1 && <CaseModal media={data.carousel} />}
-                  {item.src.includes("/videos") ? (
-                    <>
-                      <CaseModal media={data.carousel} />
-                      <video
-                        src={item.src}
-                        // poster={""}
-                        className="object-cover w-full h-full group-hover:scale-105 transition-all duration-300"
-                        autoPlay
-                        // controls
-                        playsInline
-                        disablePictureInPicture
-                        disableRemotePlayback
-                        x-webkit-airplay="deny"
-                        muted
-                        loop
-                      />
-                    </>
-                  ) : (
-                    <Image src={item.src} alt={item.alt} fill quality={100} className={cn("object-cover aspect-video", data.carousel.length > 1 && "group-hover:scale-105 transition-all duration-300")} />
-                  )}
-                </SwiperSlide>
-              ))}
-            </Swiper>
-
-            <div className="absolute w-full flex justify-between top-1/2 -translate-y-[50%] z-20">
-              <button className="scale-50 2xl:scale-80 group swiper-button-prev-case relative cursor-pointer lg:text-3xl right-8 py-[15px] pl-[22px] pr-[24px] rounded-full bg-purpleDark hover:bg-purpleLight transition-all duration-300 disabled:opacity-0">
-                <svg className="fill-purpleLight group-hover:!fill-purpleDark rotate-180"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20px" height="36px">
-                  <path fillRule="evenodd"
-                  d="M1.451,-0.008 C1.811,-0.008 2.171,0.126 2.451,0.397 L19.568,16.964 C19.848,17.235 20.006,17.607 20.006,17.996 C20.006,18.385 19.848,18.757 19.568,19.028 L2.451,35.595 C1.881,36.147 0.971,36.133 0.419,35.563 C-0.133,34.993 -0.119,34.084 0.451,33.532 L16.503,17.996 L0.451,2.459 C-0.119,1.908 -0.133,0.999 0.419,0.429 C0.701,0.139 1.076,-0.008 1.451,-0.008 Z"/>
-                </svg>
-              </button>
-              <button className="scale-50 2xl:scale-80 group swiper-button-next-case relative cursor-pointer lg:text-3xl left-8 py-[15px] pl-[24px] pr-[22px] rounded-full bg-purpleDark hover:bg-purpleLight transition-all duration-300 disabled:opacity-0">
-                <svg className="fill-purpleLight group-hover:!fill-purpleDark"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20px" height="36px">
-                  <path fillRule="evenodd"
-                  d="M1.451,-0.008 C1.811,-0.008 2.171,0.126 2.451,0.397 L19.568,16.964 C19.848,17.235 20.006,17.607 20.006,17.996 C20.006,18.385 19.848,18.757 19.568,19.028 L2.451,35.595 C1.881,36.147 0.971,36.133 0.419,35.563 C-0.133,34.993 -0.119,34.084 0.451,33.532 L16.503,17.996 L0.451,2.459 C-0.119,1.908 -0.133,0.999 0.419,0.429 C0.701,0.139 1.076,-0.008 1.451,-0.008 Z"/>
-                </svg>
-              </button>
+          {url.includes("parque-global") || url.includes("villas-cidade-jardim") ? (
+            <div className="relative w-full [&_div]:w-full" data-aos="fade-up">
+              <YouTubeEmbed videoid={data?.videoID} params="" style="max-width: 100%" />
             </div>
-          </div>
+          ) : (
+            <div className="relative" data-aos="fade-up">
+              <Swiper
+                className="aspect-video bg-purpleLight"
+                grabCursor={false}
+                modules={[Navigation]}
+                navigation={{
+                  nextEl: ".swiper-button-next-case",
+                  prevEl: ".swiper-button-prev-case",
+                }}
+              >
+                {data.carousel.map((item: any) => (
+                  <SwiperSlide className="relative group w-full aspect-video" key={item.src}>
+                    {data.carousel.length > 1 && <CaseModal media={data.carousel} />}
+                    {item.src.includes("/videos") ? (
+                      <>
+                        <CaseModal media={data.carousel} />
+                        <video
+                          src={item.src}
+                          // poster={""}
+                          className="object-cover w-full h-full group-hover:scale-105 transition-all duration-300"
+                          autoPlay
+                          // controls
+                          playsInline
+                          disablePictureInPicture
+                          disableRemotePlayback
+                          x-webkit-airplay="deny"
+                          muted
+                          loop
+                        />
+                      </>
+                    ) : (
+                      <Image src={item.src} alt={item.alt} fill quality={100} className={cn("object-cover aspect-video", data.carousel.length > 1 && "group-hover:scale-105 transition-all duration-300")} />
+                    )}
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+
+              <div className="absolute w-full flex justify-between top-1/2 -translate-y-[50%] z-20">
+                <button className="scale-50 2xl:scale-80 group swiper-button-prev-case relative cursor-pointer lg:text-3xl right-8 py-[15px] pl-[22px] pr-[24px] rounded-full bg-purpleDark hover:bg-purpleLight transition-all duration-300 disabled:opacity-0">
+                  <svg className="fill-purpleLight group-hover:!fill-purpleDark rotate-180"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20px" height="36px">
+                    <path fillRule="evenodd"
+                    d="M1.451,-0.008 C1.811,-0.008 2.171,0.126 2.451,0.397 L19.568,16.964 C19.848,17.235 20.006,17.607 20.006,17.996 C20.006,18.385 19.848,18.757 19.568,19.028 L2.451,35.595 C1.881,36.147 0.971,36.133 0.419,35.563 C-0.133,34.993 -0.119,34.084 0.451,33.532 L16.503,17.996 L0.451,2.459 C-0.119,1.908 -0.133,0.999 0.419,0.429 C0.701,0.139 1.076,-0.008 1.451,-0.008 Z"/>
+                  </svg>
+                </button>
+                <button className="scale-50 2xl:scale-80 group swiper-button-next-case relative cursor-pointer lg:text-3xl left-8 py-[15px] pl-[24px] pr-[22px] rounded-full bg-purpleDark hover:bg-purpleLight transition-all duration-300 disabled:opacity-0">
+                  <svg className="fill-purpleLight group-hover:!fill-purpleDark"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20px" height="36px">
+                    <path fillRule="evenodd"
+                    d="M1.451,-0.008 C1.811,-0.008 2.171,0.126 2.451,0.397 L19.568,16.964 C19.848,17.235 20.006,17.607 20.006,17.996 C20.006,18.385 19.848,18.757 19.568,19.028 L2.451,35.595 C1.881,36.147 0.971,36.133 0.419,35.563 C-0.133,34.993 -0.119,34.084 0.451,33.532 L16.503,17.996 L0.451,2.459 C-0.119,1.908 -0.133,0.999 0.419,0.429 C0.701,0.139 1.076,-0.008 1.451,-0.008 Z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          )}
 
           {data.grid && (
             <div className="mt-7 grid grid-cols-1 md:grid-cols-2 gap-1">

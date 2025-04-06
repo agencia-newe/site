@@ -63,7 +63,7 @@ export default function Contact({className}: Readonly<{className?: string}>) {
             Vamos tomar um café?
           </h2>
 
-          <p className="uppercase font-neulis-bold-italic text-lg lg:text-3xl">Estamos ansiosos pelo seu contato.</p>
+          <p className="uppercase font-neulis-bold-italic text-lg lg:text-3xl">Estamos ansiosas pelo seu contato.</p>
         </div>
 
         {error && 
@@ -119,7 +119,13 @@ export default function Contact({className}: Readonly<{className?: string}>) {
               (11) 97447-4102
             </Link>
           </div>
+
         </footer>
+
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 mx-auto flex justify-center gap-1 text-white font-neulis-light-italic text-sm mb-5 lg:mb-10">
+        <p>Desenvolvido por</p>
+        <Link href={"https://pachecomateus.github.io"} target="_blank" className="underline"> Mateus Pacheco</Link>
       </div>
     </section>
   )

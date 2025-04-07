@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-// import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const neulisLight = localFont({
   src: "../fonts/neulis-light.woff2",
@@ -63,7 +63,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      {/* <GoogleTagManager gtmId="GTM-M8WTPPN" /> */}
+      <GoogleTagManager gtmId="GTM-M8WTPPN" />
       <body
         className={`${neulisLight.variable} ${neulisLightItalic.variable} ${neulisRegular.variable} ${neulisMedium.variable} ${neulisSemiBold.variable} ${neulisSemiBoldItalic.variable} ${neulisBold.variable} ${neulisBoldItalic.variable} antialiased scrollbar overflow-x-hidden`}
       >

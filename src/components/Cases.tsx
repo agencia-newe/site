@@ -11,7 +11,7 @@ export default function Cases({className}: Readonly<{className?: string}>) {
           <h2 className="uppercase font-neulis-bold text-3xl lg:text-6xl hashtag">
             Cases
           </h2>
-          <p className="uppercase font-neulis-bold-italic text-lg lg:text-3xl">Uma história feita de cases é mais emocionante</p>
+          <p className="uppercase text-center font-neulis-bold-italic text-lg lg:text-3xl">Uma história feita de cases é mais emocionante</p>
         </div>
 
         <div className="mt-12 lg:mt-24 grid grid-cols-1 gap-40 lg:grid-cols-3 lg:gap-10">

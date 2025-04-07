@@ -3,14 +3,14 @@
 export const casesHomeOne = [
   {
     key: "1",
-    image: "/images/cases/parque-global.jpg",
+    image: "/images/cases/parque-global/posts-pg.jpg",
     title: "Parque Global",
     client: "Cliente: Benx",
     href: "/case-parque-global"
   },
   {
     key: "2",
-    image: "/images/cases/flamboyant.jpg",
+    image: "/images/cases/flamboyant/flamboyant-homee.jpg",
     title: "Flamboyant Urbanismo",
     client: "Cliente: Flamboyant Urbanismo",
     href: "/case-flamboyant-urbanismo"
@@ -27,21 +27,21 @@ export const casesHomeOne = [
 export const casesHomeTwo = [
   {
     key: "4",
-    image: "/images/cases/innerhaus.jpg",
+    image: "/images/cases/innerhaus/mockup_innerhaus2.jpg",
     title: "Innerhaus",
     client: "Cliente: CV Haus",
     href: "/case-innerhaus"
   },
   {
     key: "5",
-    image: "/images/cases/casa-figueira.jpg",
+    image: "/images/cases/casa-figueira/casa-figueira-home.jpg",
     title: "Casa Figueira",
     client: "Cliente: Iguatemi",
     href: "/case-casa-figueira"
   },
   {
     key: "6",
-    image: "/images/cases/blend.jpg",
+    image: "/images/cases/blend/sacola-blend-home.jpg",
     title: "Blend",
     client: "Cliente: Sequóia",
     href: "/case-blend"
@@ -65,7 +65,7 @@ export const casesHomeThree = [
   },
   {
     key: "9",
-    image: "/images/cases/Abade66.jpg",
+    image: "/images/cases/abade66/book-abade-mockup.jpg",
     title: "Abade66",
     client: "Cliente: RBG",
     href: "/case-abade66"
@@ -75,7 +75,7 @@ export const casesHomeThree = [
 export const casesHomeFour = [
   {
     key: "10",
-    image: "/images/cases/TheOne.jpg",
+    image: "/images/cases/the-one/carrossel-theone-1.jpg",
     title: "The One",
     client: "Cliente: Nova Harmonia",
     href: "/case-the-one"
@@ -89,7 +89,7 @@ export const casesHomeFour = [
   },
   {
     key: "12",
-    image: "/images/cases/celebra.jpg",
+    image: "/images/cases/celebra/anuncio-celebra.jpg",
     title: "Celebra",
     client: "Cliente: Wanderley Construções",
     href: "/case-celebra"

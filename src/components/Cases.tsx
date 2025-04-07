@@ -1,4 +1,4 @@
-import { casesHomeFour, casesHomeOne, casesHomeThree, casesHomeTwo } from "@/helpers/CasesHome";
+import { casesHomeFive, casesHomeFour, casesHomeOne, casesHomeThree, casesHomeTwo } from "@/helpers/CasesHome";
 import Image from "next/image";
 import Link from "next/link";
 import BlockLogos from "./BlockLogos";
@@ -83,7 +83,7 @@ export default function Cases({className}: Readonly<{className?: string}>) {
           ))}
         </div>
 
-        <div className="mt-40 lg:-mt-12 grid grid-cols-1 gap-40 lg:grid-cols-3 lg:gap-10 lg:items-end lg:mb-60 mb-44">
+        <div className="mt-40 lg:-mt-12 grid grid-cols-1 gap-40 lg:grid-cols-3 lg:gap-10 lg:items-end">
           {casesHomeFour.map((rowFour: any, index: number) => (
             <Link key={rowFour.key} href={rowFour.href} title={rowFour.title} className="group lg:even:h-[480px] 2xl:even:h-[560px] lg:odd:h-[260px] 2xl:odd:h-[330px] h-[400px] w-full" data-aos="fade-down" 
             data-aos-delay={index % 2 === 1 ? 300 : 600}>
@@ -99,6 +99,29 @@ export default function Cases({className}: Readonly<{className?: string}>) {
               <div className="uppercase px-2 mt-7">
                 <p className="text-xl lg:text-2xl font-neulis-bold-italic mb-2">{rowFour.title}</p>
                 <p className="font-neulis-medium text-sm">{rowFour.client}</p>
+              </div>
+            
+              <div className="mt-3 bg-purpleLight h-px w-full" />
+            </Link>
+          ))}
+        </div>
+
+        <div className="mt-40 grid grid-cols-1 gap-40 lg:grid-cols-3 lg:gap-10 lg:mb-60 mb-44">
+          {casesHomeFive.map((rowFive: any, index: number) => (
+            <Link key={rowFive.key} href={rowFive.href} title={rowFive.title} className="group lg:odd:h-[480px] 2xl:odd:h-[560px] lg:even:h-[260px] 2xl:even:h-[330px] h-[400px] w-full" data-aos="fade-down" 
+            data-aos-delay={index % 2 === 1 ? 300 : 600}>
+              <div className="relative h-full w-auto rounded-3xl overflow-hidden">
+                <Image
+                  src={rowFive.image}
+                  alt={rowFive.title} 
+                  fill 
+                  className="object-cover group-hover:scale-110 transition-all duration-300" 
+                />
+              </div>
+
+              <div className="uppercase px-2 mt-7">
+                <p className="text-xl lg:text-2xl font-neulis-bold-italic mb-2">{rowFive.title}</p>
+                <p className="font-neulis-medium text-sm">{rowFive.client}</p>
               </div>
             
               <div className="mt-3 bg-purpleLight h-px w-full" />

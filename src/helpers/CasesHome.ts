@@ -1,23 +1,21 @@
-// divide this data into 4 groups of 3 cases
-
 export const casesHomeOne = [
   {
     key: "1",
-    image: "/images/cases/parque-global/posts-pg.jpg",
+    image: "/images/cases/capas_cases.jpg",
     title: "Parque Global",
     client: "Cliente: Benx",
     href: "/case-parque-global"
   },
   {
     key: "2",
-    image: "/images/cases/flamboyant/flamboyant-homee.jpg",
+    image: "/images/cases/capas_cases2.jpg",
     title: "Flamboyant Urbanismo",
     client: "Cliente: Flamboyant Urbanismo",
     href: "/case-flamboyant-urbanismo"
   },
   {
     key: "3",
-    image: "/images/cases/v3rso.jpg",
+    image: "/images/cases/capas_cases3.jpg",
     title: "V3rso Promenade",
     client: "Cliente: WV Maldi",
     href: "/case-v3rso-promenade"
@@ -27,21 +25,21 @@ export const casesHomeOne = [
 export const casesHomeTwo = [
   {
     key: "4",
-    image: "/images/cases/innerhaus/mockup_innerhaus2.jpg",
+    image: "/images/cases/capas_cases4.jpg",
     title: "Innerhaus",
     client: "Cliente: CV Haus",
     href: "/case-innerhaus"
   },
   {
     key: "5",
-    image: "/images/cases/casa-figueira/casa-figueira-home.jpg",
+    image: "/images/cases/capas_cases5.jpg",
     title: "Casa Figueira",
     client: "Cliente: Iguatemi",
     href: "/case-casa-figueira"
   },
   {
     key: "6",
-    image: "/images/cases/blend/sacola-blend-home.jpg",
+    image: "/images/cases/capas_cases6.jpg",
     title: "Blend",
     client: "Cliente: Sequóia",
     href: "/case-blend"
@@ -51,21 +49,21 @@ export const casesHomeTwo = [
 export const casesHomeThree = [
   {
     key: "7",
-    image: "/images/cases/villas-cidade-jardim.jpg",
+    image: "/images/cases/capas_cases7.jpg",
     title: "Villas Cidade Jardim",
     client: "Cliente: Catuaí",
     href: "/case-villas-cidade-jardim"
   },
   {
     key: "8",
-    image: "/images/cases/Elo.jpg",
+    image: "/images/cases/capas_cases8.jpg",
     title: "Elo",
     client: "Cliente: Cury",
     href: "/case-elo"
   },
   {
     key: "9",
-    image: "/images/cases/abade66/book-abade-mockup.jpg",
+    image: "/images/cases/capas_cases9.jpg",
     title: "Abade66",
     client: "Cliente: RBG",
     href: "/case-abade66"
@@ -75,23 +73,47 @@ export const casesHomeThree = [
 export const casesHomeFour = [
   {
     key: "10",
-    image: "/images/cases/the-one/carrossel-theone-1.jpg",
+    image: "/images/cases/capas_cases10.jpg",
     title: "The One",
     client: "Cliente: Nova Harmonia",
     href: "/case-the-one"
   },
   {
     key: "11",
-    image: "/images/cases/Laje-de-pedra.jpg",
+    image: "/images/cases/capas_cases11.jpg",
     title: "Laje de Pedra",
     client: "Cliente: Kempinski",
     href: "/case-laje-de-pedra"
   },
   {
     key: "12",
-    image: "/images/cases/celebra/anuncio-celebra.jpg",
+    image: "/images/cases/capas_cases12.jpg",
     title: "Celebra",
     client: "Cliente: Wanderley Construções",
     href: "/case-celebra"
   }
+]
+
+export const casesHomeFive = [
+  {
+    key: "13",
+    image: "/images/cases/capas_cases13.jpg",
+    title: "Casas Brasileira",
+    client: "Cliente: Lucio",
+    href: "/case-casa-brasileira"
+  },
+  {
+    key: "14",
+    image: "/images/cases/capas_cases14.jpg",
+    title: "Artse",
+    client: "Cliente: Tarraf",
+    href: "/case-artse"
+  },
+  {
+    key: "15",
+    image: "/images/cases/capas_cases15.jpg",
+    title: "Walk",
+    client: "Cliente: Diálogo",
+    href: "/case-walk"
+  },
 ]

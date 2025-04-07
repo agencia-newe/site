@@ -431,3 +431,172 @@ export const villas = {
     }
   ]
 }
+
+export const casaBrasileira = {
+  plaza: "São Paulo - SP",
+  client: "Lucio",
+  product: "Casa Brasileira",
+  carousel: [
+    {
+      src: "/images/cases/casa-brasileira/casa-br-carrossel.jpg",
+      alt: "Casa Brasileira",
+    },
+  ],
+  grid: [
+    {
+      src: "/images/cases/casa-brasileira/revista-aberta-cbr.jpg",
+      alt: "Casa Brasileira",
+    },
+    {
+      src: "/images/cases/casa-brasileira/revista-casabr.jpg",
+      alt: "Casa Brasileira",
+    },
+    {
+      src: "/images/cases/casa-brasileira/mockup-book-aberto-casabr.jpg",
+      alt: "Casa Brasileira",
+    },
+    {
+      src: "/images/cases/casa-brasileira/sacola-casabr.jpg",
+      alt: "Casa Brasileira"
+    },
+    {
+      src: "/images/cases/casa-brasileira/quadros-cbr.jpg",
+      alt: "Casa Brasileira",
+    }
+  ]
+}
+
+export const walk = {
+  plaza: "São Paulo - SP",
+  client: "Diálogo",
+  product: "Walk Belém",
+  carousel: [
+    {
+      src: "/images/cases/walk/carrossel-walk.jpg",
+      alt: "Walk",
+    },
+  ],
+  grid: [
+    {
+      src: "/images/cases/walk/anuncio-walk.jpg",
+      alt: "Walk",
+    },
+    {
+      src: "/images/cases/walk/reprint-walk.jpg",
+      alt: "Walk",
+    },
+    {
+      src: "/images/cases/walk/sacola-walk.jpg",
+      alt: "Walk",
+    },
+    {
+      src: "/images/cases/walk/revista-walk.jpg",
+      alt: "Walk"
+    }
+  ]
+}
+
+export const artse = {
+  plaza: "Ribeirão Preto - SP",
+  client: "Tarraf",
+  product: "Artse",
+  carousel: [
+    {
+      src: "/images/cases/artse/carrossel-artse.jpg",
+      alt: "Artse",
+    },
+  ],
+  grid: [
+    {
+      src: "/images/cases/artse/outdoor-artse.jpg",
+      alt: "Artse",
+    },
+    {
+      src: "/images/cases/artse/reprint-artse.jpg",
+      alt: "Artse",
+    },
+    {
+      src: "/images/cases/artse/book-artse.jpg",
+      alt: "Artse",
+    },
+    {
+      src: "/images/cases/artse/vela-artse.jpg",
+      alt: "Artse"
+    }
+  ]
+}
+
+export const iconECB = {
+  plaza: "Passo Fundo - RS",
+  client: "ECB Group",
+  product: "Icon ECB",
+  carousel: [
+    {
+      src: "/videos/ecb-video.mp4",
+      alt: "Icon ECB",
+    },
+    {
+      src: "/images/cases/icon-ecb/carrossel-ECB.jpg",
+      alt: "Icon ECB",
+    },
+    {
+      src: "/images/cases/icon-ecb/carrossel-ECB2.jpg",
+      alt: "Icon ECB",
+    },
+    {
+      src: "/images/cases/icon-ecb/carrossel-ECB3.jpg",
+      alt: "Icon ECB",
+    },
+    {
+      src: "/images/cases/icon-ecb/carrossel-ECB4.jpg",
+      alt: "Icon ECB",
+      
+    },
+    {
+      src: "/images/cases/icon-ecb/carrossel-ECB5.jpg",
+      alt: "Icon ECB",
+    },
+    {
+      src: "/images/cases/icon-ecb/carrossel-ECB6.jpg",
+      alt: "Icon ECB",
+    },
+    {
+      src: "/images/cases/icon-ecb/carrossel-ECB7.jpg",
+      alt: "Icon ECB",
+    }
+  ],
+  grid: [
+    {
+      src: "/images/cases/icon-ecb/icon-mockup-1.jpg",
+      alt: "Icon ECB",
+    },
+    {
+      src: "/images/cases/icon-ecb/icon-mockup-2.jpg",
+      alt: "Icon ECB",
+    },
+    {
+      src: "/images/cases/icon-ecb/icon-mockup-3.jpg",
+      alt: "Icon ECB",
+    },
+    {
+      src: "/images/cases/icon-ecb/icon-mockup-4.jpg",
+      alt: "Icon ECB"
+    },
+    {
+      src: "/images/cases/icon-ecb/icon-mockup-5.jpg",
+      alt: "Icon ECB",
+    },
+    {
+      src: "/images/cases/icon-ecb/icon-mockup-6.jpg",
+      alt: "Icon ECB",
+    },
+    {
+      src: "/images/cases/icon-ecb/icon-mockup-7.jpg",
+      alt: "Icon ECB",
+    },
+    {
+      src: "/images/cases/icon-ecb/icon-mockup-8.jpg",
+      alt: "Icon ECB"
+    }
+  ]
+}

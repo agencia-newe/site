@@ -315,6 +315,22 @@ export const parqueGlobal = {
       alt: "Parque Global",
     },
     {
+      src: "/images/cases/parque-global/mockup_anuncio_pg-1.jpg",
+      alt: "Parque Global",
+    },
+    {
+      src: "/images/cases/parque-global/posts-pg.jpg",
+      alt: "Parque Global",
+    },
+    {
+      src: "/images/cases/parque-global/mockup_anuncio_pg-2.jpg",
+      alt: "Parque Global",
+    },
+    {
+      src: "/images/cases/parque-global/mockup_anuncio_pg-3.jpg",
+      alt: "Parque Global",
+    },
+    {
       src: "/images/cases/parque-global/book-PG-ibirapuera.jpg",
       alt: "Parque Global",
     },
@@ -324,10 +340,6 @@ export const parqueGlobal = {
     },
     {
       src: "/images/cases/parque-global/pgr-mockup.jpg",
-      alt: "Parque Global",
-    },
-    {
-      src: "/images/cases/parque-global/posts-pg.jpg",
       alt: "Parque Global",
     },
     {

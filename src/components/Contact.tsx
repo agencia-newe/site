@@ -24,7 +24,7 @@ export default function Contact({className}: Readonly<{className?: string}>) {
 
   const formData = new FormData(event.target as HTMLFormElement);
   formData.append("access_key", "2c70c258-19b5-4434-bdf0-4b2f71a58a10");
-  formData.append("h-captcha-response", captchaToken); // ✅ append captcha token
+  formData.append("h-captcha-response", captchaToken);
 
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);

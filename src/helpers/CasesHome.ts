@@ -26,9 +26,9 @@ export const casesHomeTwo = [
   {
     key: "4",
     image: "/images/cases/capas_cases4.jpg",
-    title: "Innerhaus",
-    client: "Cliente: CV Haus",
-    href: "/case-innerhaus"
+    title: "Icon ECB",
+    client: "Cliente: ECB Group",
+    href: "/case-icon-ecb"
   },
   {
     key: "5",

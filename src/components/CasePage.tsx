@@ -12,12 +12,14 @@ import CaseModal from "./CaseModal";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { YouTubeEmbed } from "@next/third-parties/google";
+import WhatsApp from "./WhatsApp";
 
 export default function CasePage({data}: {data: any}) {
   const url = usePathname();
   return (
     <section className="relative">
       <AosInit />
+      <WhatsApp />
       <Image src={"/images/galaxia-modelo-denegocio.png"} alt="galaxia" width={800} height={319} className="absolute top-[90px] left-0 right-0 px-10 md:px-24 lg:px-0 mx-auto z-0" data-aos="fade-down" />
       <Image src={"/images/planetas-novo.png"} alt="planetas" width={420} height={420} className="absolute top-[113px] left-0 right-0 mx-auto px-24 lg:px-0 z-10" data-aos="fade-down" data-aos-delay="300" />
       <Header menu={menuCarreiras} className="z-40" />

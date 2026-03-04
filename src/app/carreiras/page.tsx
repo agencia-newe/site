@@ -1,6 +1,7 @@
 'use client';
 
 import Header from "@/components/Header";
+import WhatsApp from "@/components/WhatsApp";
 import { menuCarreiras } from "@/helpers/Menu";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import Image from "next/image";
@@ -83,6 +84,7 @@ export default function Carreiras() {
   return (
     <section className={`relative lg:py-32 pt-32 pb-20 bg-purple min-h-screen`}>
       <Header menu={menuCarreiras} className="z-40" />
+      <WhatsApp />
       <div className="fixed top-0 w-full h-[93px] bg-purple z-30 rounded-b-4xl" />
       <Image src="/images/galaxa-contato.png" alt="galaxia" width={380} height={855} className="absolute bottom-0 max-w-1/3 lg:max-w-full left-0 z-0" data-aos="fade-right" />
       <Image src="/images/planeta-2.svg" alt="galaxia" width={300} height={300} className="absolute top-[50%] translate-y-[-50%] z-0 hidden lg:block" data-aos="fade-down" data-aos-delay="500" />

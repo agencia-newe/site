@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import WhatsApp from "@/components/WhatsApp";
 import { menuCarreiras } from "@/helpers/Menu";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,6 +8,7 @@ export default function Page() {
   return (
     <section className="relative pt-32 pb-20 bg-white min-h-screen">
       <Header menu={menuCarreiras} className="z-40" />
+      <WhatsApp />
       <div className="fixed top-0 w-full h-[93px] bg-purple z-30 rounded-b-4xl" />
       <div className="container text-purpleDark font-neulis-semi-bold">
         <h1 className="uppercase font-neulis-bold-italic text-3xl lg:text-5xl">Política de Privacidade</h1>
@@ -90,7 +92,7 @@ export default function Page() {
             <Link href="https://www.instagram.com/agencianewe/" target="_blank" className="hover:opacity-70 transition-all duration-300">
               <Image src="/images/instagram.svg" alt="instagram" width={40} height={40} />
             </Link>
-            <Link href="#" className="hover:opacity-70 transition-all duration-300">
+            <Link href="https://www.tiktok.com/@agencianewe" target="_blank" className="hover:opacity-70 transition-all duration-300">
               <Image src="/images/tiktok.svg" alt="tiktok" width={40} height={40} />
             </Link>
             <Link href="https://br.linkedin.com/company/agencianewe" target="_blank" className="hover:opacity-70 transition-all duration-300">
@@ -99,8 +101,8 @@ export default function Page() {
           </div>
 
           <div className="text-purpleDark uppercase font-neulis-bold">
-            <p>Rua Urussuí, 300 | 4º andar, CJ. 42</p>
-            <p>Vila Nova Conceição, São Paulo - SP</p>
+            <p>Rua Dr. Renato Paes de Barros</p>
+            <p>Itaim Bibi, São Paulo - SP</p>
             <Link href="tel:+5511974474102" title="telefone" className="hover:underline">
               (11) 97447-4102
             </Link>

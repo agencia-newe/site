@@ -169,7 +169,7 @@ export default function Carreiras() {
             <Link href="https://www.instagram.com/agencianewe/" target="_blank" className="hover:opacity-70 transition-all duration-300">
               <Image src="/images/instagram.svg" alt="instagram" width={40} height={40} />
             </Link>
-            <Link href="#" className="hover:opacity-70 transition-all duration-300">
+            <Link href="https://www.tiktok.com/@agencianewe" target="_blank" className="hover:opacity-70 transition-all duration-300">
               <Image src="/images/tiktok.svg" alt="tiktok" width={40} height={40} />
             </Link>
             <Link href="https://br.linkedin.com/company/agencianewe" target="_blank" className="hover:opacity-70 transition-all duration-300">
@@ -178,8 +178,8 @@ export default function Carreiras() {
           </div>
 
           <div className="text-white uppercase font-neulis-regular text-sm">
-            <p>Rua Urussuí, 300 | 4º andar, CJ. 42</p>
-            <p>Vila Nova Conceição, São Paulo - SP</p>
+            <p>Rua Dr. Renato Paes de Barros</p>
+            <p>Itaim Bibi, São Paulo - SP</p>
             <Link href="tel:+5511974474102" title="telefone" className="hover:underline">
               (11) 97447-4102
             </Link>
